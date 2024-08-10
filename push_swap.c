@@ -6,7 +6,7 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 15:42:17 by jquiaro-          #+#    #+#             */
-/*   Updated: 2024/07/27 20:15:15 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/08/10 22:14:07 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	init_stack(t_stack *stack_a, t_stack *stack_b, int *numbers, int count)
 		push_stack(stack_a, 0, numbers[i]);
 		i--;
 	}
-	insertion_sort(numbers, count);
+	bubble_sort(numbers, count);
 	tmp = stack_a->head;
 	while (tmp)
 	{

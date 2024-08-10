@@ -2,7 +2,8 @@ NAME = push_swap
 
 SRCS = push_swap.c \
 	check_digits.c \
-	push_swap_utils.c
+	push_swap_utils.c \
+	stack_utils.c
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror

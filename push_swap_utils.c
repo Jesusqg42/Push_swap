@@ -6,11 +6,19 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 21:03:07 by jquiaro-          #+#    #+#             */
-/*   Updated: 2024/07/27 21:10:50 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/08/07 23:15:58 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static int	ft_space(char c)
+{
+	return (
+		c == ' ' || c == '\t' || c == '\n' || c == '\v'
+		|| c == '\f' || c == '\r'
+	);
+}
 
 int64_t	ft_atoll(const char *str)
 {
@@ -21,7 +29,7 @@ int64_t	ft_atoll(const char *str)
 	i = 0;
 	sign = 1;
 	out = 0;
-	while (ft_isspace(str[i]))
+	while (ft_space(str[i]))
 		i++;
 	if (str[i] == '+' || str[i] == '-')
 	{
