@@ -6,7 +6,7 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:56:08 by jquiaro-          #+#    #+#             */
-/*   Updated: 2024/08/10 21:14:42 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/08/13 17:55:01 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,7 @@ int64_t	ft_atoll(const char *str);
 void	ft_free2d(char **str);
 void	init_stack(t_stack *stack_a, t_stack *stack_b, int *numbers, int count);
 void	push_stack(t_stack *stack, int index, int data);
+void	bubble_sort(int *numbers, int count);
+int		index_data(int data, int *numbers);
 
 #endif
