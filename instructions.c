@@ -6,7 +6,7 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 17:46:12 by jquiaro-          #+#    #+#             */
-/*   Updated: 2024/08/14 23:19:20 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/08/14 23:53:30 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	swap(t_stack *stack, char character, int value)
 {
 	t_node	*temp;
 
-	/*if (stack->head == NULL || stack->head->next)
-		return ;*/
 	temp = stack->head;
 	stack->head = temp->next;
 	temp->next = stack->head->next;
