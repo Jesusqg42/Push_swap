@@ -6,11 +6,11 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 21:36:56 by marvin            #+#    #+#             */
-/*   Updated: 2024/07/16 12:12:27 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/08/14 23:14:06 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 static int	hexa_pointer(char *str, unsigned long long pointer, int let)
 {

@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/03 12:43:25 by marvin            #+#    #+#             */
-/*   Updated: 2024/07/03 12:43:25 by marvin           ###   ########.fr       */
+/*   Created: 2024/07/07 21:25:08 by marvin            #+#    #+#             */
+/*   Updated: 2024/08/14 23:14:01 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_putchar(char str)
+int	ft_putstr(char *str)
 {
-	if (write(1, &str, 1) != 1)
-		return (-1);
-	return (1);
+	int	i;
+
+	i = 0;
+	if (!str)
+	{
+		if (write(1, "(null)", 6) != 6)
+			return (-1);
+		return (6);
+	}
+	while (str[i])
+	{
+		if (write(1, &str[i], 1) != 1)
+			return (-1);
+		i++;
+	}
+	return (i);
 }

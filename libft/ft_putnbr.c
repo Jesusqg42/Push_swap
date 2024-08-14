@@ -6,11 +6,11 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 14:52:56 by jquiaro-          #+#    #+#             */
-/*   Updated: 2024/07/16 10:28:14 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/08/14 23:14:20 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 static int	min_int(void)
 {

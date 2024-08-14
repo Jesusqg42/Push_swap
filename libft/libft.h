@@ -6,7 +6,7 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 19:07:01 by jquiaro-          #+#    #+#             */
-/*   Updated: 2024/07/27 18:18:31 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/08/14 23:11:12 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,13 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 int		ft_lstsize(t_list *lst);
+//pri
+int				ft_printf(char const *str, ...);
+int				ft_putchar(char str);
+int				ft_putstr(char *str);
+int				ft_putpointer(void *str);
+int				ft_putnbr(int num);
+unsigned int	ft_putnosign(unsigned int num);
+int				ft_puthexa(unsigned int num, char str);
 
 #endif
