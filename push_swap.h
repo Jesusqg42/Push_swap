@@ -6,15 +6,14 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:56:08 by jquiaro-          #+#    #+#             */
-/*   Updated: 2024/08/13 17:55:01 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/08/14 23:45:11 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "libft/libft.h"
-# include "ft_printf/ft_printf.h"
+# include "./libft/libft.h"
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
@@ -45,5 +44,10 @@ void	init_stack(t_stack *stack_a, t_stack *stack_b, int *numbers, int count);
 void	push_stack(t_stack *stack, int index, int data);
 void	bubble_sort(int *numbers, int count);
 int		index_data(int data, int *numbers);
+void	sort(t_stack *stack_a, t_stack *stack_b, int *numbers, int count);
+int		stack_tidy(t_stack *stack);
+void	free_stack(t_stack *stack);
+int		pop_stack(t_stack *stack);
+void	swap(t_stack *stack, char character, int value);
 
 #endif

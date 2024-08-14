@@ -6,7 +6,7 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 21:03:07 by jquiaro-          #+#    #+#             */
-/*   Updated: 2024/08/12 17:40:30 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/08/14 23:47:52 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,23 +63,16 @@ void	ft_free2d(char **str)
 	}
 }
 
-void	bubble_sort(int *numbers, int count)
+int	stack_tidy(t_stack *stack)
 {
-	int	temp;
-	int	i;
-	int	j;
+	t_node	*temp;
 
-	i = 1;
-	while (i < count)
+	temp = stack->head;
+	while (temp->next)
 	{
-		temp = numbers[i];
-		j = i - 1;
-		while (j >= 0 && numbers[j] > temp)
-		{
-			numbers[j + 1] = numbers[j];
-			j -= 1;
-		}
-		numbers[j + 1] = temp;
-		i++;
+		if (temp->data > temp->next->data)
+			return (0);
+		temp = temp->next;
 	}
+	return (1);
 }
