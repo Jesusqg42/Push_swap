@@ -6,7 +6,7 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 15:03:31 by jquiaro-          #+#    #+#             */
-/*   Updated: 2024/07/27 21:12:43 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/08/14 23:50:05 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ int	check_digits(int argc, char **argv)
 			if (!ft_isdigit(argv[i][j]) && argv[i][j] != ' '
 			&& argv[i][j] != '-')
 				return (-1);
-			if (ft_isdigit(argv[i][j] && (argv[i][j + 1] == ' '
-				|| argv[i][j + 1] == '\0')))
+			if (ft_isdigit(argv[i][j]) && (argv[i][j + 1] == ' '
+				|| argv[i][j + 1] == '\0'))
 				count++;
 			j++;
 		}
