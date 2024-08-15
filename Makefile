@@ -19,7 +19,6 @@ all: ${NAME}
 ${NAME}: ${OBJS} ${LIBFT_PATH}${LIBFT}
 	@${CC} ${CFLAGS} ${OBJS} ${LIBFT_PATH}${LIBFT} -o ${NAME}
 
-
 ${LIBFT_PATH}${LIBFT}:	
 	@make -C ${LIBFT_PATH} --silent
 
