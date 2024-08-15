@@ -6,7 +6,7 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 15:42:17 by jquiaro-          #+#    #+#             */
-/*   Updated: 2024/08/14 23:41:48 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/08/15 02:35:39 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ void	init_stack(t_stack *stack_a, t_stack *stack_b, int *numbers, int count)
 
 void	sort(t_stack *stack_a, t_stack *stack_b, int *numbers, int count)
 {
-	(void)stack_b;
 	if (stack_tidy(stack_a))
 	{
 		free(numbers);
@@ -73,4 +72,6 @@ void	sort(t_stack *stack_a, t_stack *stack_b, int *numbers, int count)
 	}
 	else if (count == 2)
 		swap(stack_a, 'a', 1);
+	else
+		exit(1);
 }

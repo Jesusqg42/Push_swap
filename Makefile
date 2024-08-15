@@ -6,7 +6,6 @@ SRCS = push_swap.c \
 	stack_utils.c \
 	instructions.c \
 
-
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -rf
@@ -22,7 +21,7 @@ ${NAME}: ${OBJS} ${LIBFT_PATH}${LIBFT}
 
 
 ${LIBFT_PATH}${LIBFT}:	
-			@make -C ${LIBFT_PATH} --silent
+	@make -C ${LIBFT_PATH} --silent
 
 clean:
 	@${RM} ${OBJS}
