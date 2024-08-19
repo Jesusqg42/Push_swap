@@ -33,21 +33,43 @@ typedef struct s_stack
 	int		size;
 }	t_stack;
 
+/* ************************************************************************** */
+/*                                   MAIN                                     */
+/* ************************************************************************** */
 int		main(int argc, char **argv);
+void	init_stack(t_stack *stack_a, t_stack *stack_b, int *numbers, int count);
+void	sort(t_stack *stack_a, t_stack *stack_b, int *numbers, int count);
+/* ************************************************************************** */
+/*                                CHECK_DIGITS                                */
+/* ************************************************************************** */
 int		check_digits(int argc, char **argv);
 void	check_range(char **list_numbers, int *numbers);
-int		*store_digits(int argc, char **argv, int count);
 int		check_duplicates(int *numbers, int count);
+int		*store_digits(int argc, char **argv, int count);
+/* ************************************************************************** */
+/*                               PUSH_SWAP_UTILS                              */
+/* ************************************************************************** */
 int64_t	ft_atoll(const char *str);
 void	ft_free2d(char **str);
-void	init_stack(t_stack *stack_a, t_stack *stack_b, int *numbers, int count);
-void	push_stack(t_stack *stack, int index, int data);
 void	bubble_sort(int *numbers, int count);
+/* ************************************************************************** */
+/*                                STACK_UTILS                                 */
+/* ************************************************************************** */
+void	push_stack(t_stack *stack, int index, int data);
+int		pop_stack(t_stack *stack);
 int		index_data(int data, int *numbers);
-void	sort(t_stack *stack_a, t_stack *stack_b, int *numbers, int count);
 int		stack_tidy(t_stack *stack);
 void	free_stack(t_stack *stack);
-int		pop_stack(t_stack *stack);
+/* ************************************************************************** */
+/*                               INSTRUCTIONS                                 */
+/* ************************************************************************** */
 void	swap(t_stack *stack, char character, int value);
+/* ************************************************************************** */
+/*                                 CLASSIFY                                   */
+/* ************************************************************************** */
+void	musketeers_sort(t_stack *stack, int count);
+/* ************************************************************************** */
+/*                              CLASSIFY_UTILS                                */
+/* ************************************************************************** */
 
 #endif

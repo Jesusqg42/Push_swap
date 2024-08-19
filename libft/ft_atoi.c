@@ -13,14 +13,6 @@
 #include <limits.h>
 #include "libft.h"
 
-static int	ft_space(char c)
-{
-	return (
-		c == ' ' || c == '\t' || c == '\n' || c == '\v'
-		|| c == '\f' || c == '\r'
-	);
-}
-
 int32_t	ft_atoi(const char *str)
 {
 	size_t	i;

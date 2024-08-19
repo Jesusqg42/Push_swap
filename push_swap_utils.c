@@ -12,14 +12,6 @@
 
 #include "push_swap.h"
 
-static int	ft_space(char c)
-{
-	return (
-		c == ' ' || c == '\t' || c == '\n' || c == '\v'
-		|| c == '\f' || c == '\r'
-	);
-}
-
 int64_t	ft_atoll(const char *str)
 {
 	size_t	i;
@@ -63,16 +55,23 @@ void	ft_free2d(char **str)
 	}
 }
 
-int	stack_tidy(t_stack *stack)
+void	bubble_sort(int *numbers, int count)
 {
-	t_node	*temp;
+	int	temp;
+	int	i;
+	int	j;
 
-	temp = stack->head;
-	while (temp->next)
+	i = 1;
+	while (i < count)
 	{
-		if (temp->data > temp->next->data)
-			return (0);
-		temp = temp->next;
+		temp = numbers[i];
+		j = i - 1;
+		while (j >= 0 && numbers[j] > temp)
+		{
+			numbers[j + 1] = numbers[j];
+			j -= 1;
+		}
+		numbers[j + 1] = temp;
+		i++;
 	}
-	return (1);
 }

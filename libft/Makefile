@@ -40,7 +40,8 @@ SRCS = ft_isalpha.c \
 	ft_putnbr.c \
 	ft_puthexa.c \
 	ft_putchar.c \
-	ft_printf.c
+	ft_printf.c \
+	ft_space.c
 
 BONUS = ft_lstnew_bonus.c \
 	ft_lstadd_front_bonus.c \

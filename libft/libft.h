@@ -99,5 +99,6 @@ int				ft_putpointer(void *str);
 int				ft_putnbr(int num);
 unsigned int	ft_putnosign(unsigned int num);
 int				ft_puthexa(unsigned int num, char str);
+int				ft_space(char c);
 
 #endif

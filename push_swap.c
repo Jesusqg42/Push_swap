@@ -43,10 +43,10 @@ void	init_stack(t_stack *stack_a, t_stack *stack_b, int *numbers, int count)
 	t_node	*temp;
 	int		i;
 
-	stack_b->head = NULL;
 	stack_a->head = NULL;
-	stack_b->size = 0;
 	stack_a->size = 0;
+	stack_b->head = NULL;
+	stack_b->size = 0;
 	i = count - 1;
 	while (i >= 0)
 	{
@@ -72,6 +72,8 @@ void	sort(t_stack *stack_a, t_stack *stack_b, int *numbers, int count)
 	}
 	else if (count == 2)
 		swap(stack_a, 'a', 1);
+	else if (count == 3)
+		musketeers_sort(stack_a, count);
 	else
 		exit(1);
 }

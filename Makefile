@@ -5,6 +5,8 @@ SRCS = push_swap.c \
 	push_swap_utils.c \
 	stack_utils.c \
 	instructions.c \
+	classify.c \
+	classify_utils.c
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
