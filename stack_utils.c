@@ -6,7 +6,7 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/10 20:57:30 by jquiaro-          #+#    #+#             */
-/*   Updated: 2024/08/15 00:00:24 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/08/21 16:46:10 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,16 @@ void	push_stack(t_stack *stack, int index, int data)
 
 int	pop_stack(t_stack *stack)
 {
-	t_node	*actual;
+	t_node	*temp;
 	int		data;
 
 	if (!stack->head)
 		exit(1);
-	actual = stack->head;
-	data = actual->data;
-	stack->head = actual->next;
-	free(actual);
-	actual = NULL;
+	temp = stack->head;
+	data = temp->data;
+	stack->head = temp->next;
+	free(temp);
+	temp = NULL;
 	stack->size--;
 	return (data);
 }

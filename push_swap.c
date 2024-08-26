@@ -6,7 +6,7 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 15:42:17 by jquiaro-          #+#    #+#             */
-/*   Updated: 2024/08/15 04:16:47 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/08/26 23:42:51 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,9 +71,68 @@ void	sort(t_stack *stack_a, t_stack *stack_b, int *numbers, int count)
 		exit(1);
 	}
 	else if (count == 2)
-		swap(stack_a, 'a', 1);
+		swap(stack_a,'a');
 	else if (count == 3)
 		musketeers_sort(stack_a, count);
 	else
 		exit(1);
+}
+
+//TESTS
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct s_node
+{
+  int data;
+  struct s_node *next;
+} t_node;
+
+typedef struct s_stack
+{
+  t_node *head;
+  int size;
+} t_stack;
+
+void    swap(t_stack *stack)
+{
+    t_node    *temp;
+
+    temp = stack->head;
+    stack->head = temp->next;
+    temp->next = stack->head->next;
+    stack->head->next = temp;
+    printf("sa");
+}
+
+void push_stack(t_stack *stack, int index, int data)
+{
+  t_node *temp;
+
+  temp = (t_node *)malloc(sizeof(t_node));
+  if (!temp)
+    return;
+  temp->data = data;
+  temp->next = stack->head;
+  stack->head = temp;
+  stack->size++;
+}
+
+int main(void)
+{
+  t_stack stack_a; 
+  int numbers[] = {2, 1, 3};
+  
+  stack_a.head = NULL;
+  stack_a.size = 0;
+  int length = sizeof(numbers) / sizeof(int);
+
+  int i = length - 1;
+  while (i >= 0)
+    push_stack(&stack_a, 0, numbers[i--]);
+    
+  if (length == 3)
+    swap(&stack_a);
+  return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 21:03:07 by jquiaro-          #+#    #+#             */
-/*   Updated: 2024/08/14 23:47:52 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/08/22 17:11:09 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	bubble_sort(int *numbers, int count)
 		while (j >= 0 && numbers[j] > temp)
 		{
 			numbers[j + 1] = numbers[j];
-			j -= 1;
+			j--;
 		}
 		numbers[j + 1] = temp;
 		i++;
