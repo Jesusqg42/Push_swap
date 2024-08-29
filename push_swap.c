@@ -6,7 +6,7 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 15:42:17 by jquiaro-          #+#    #+#             */
-/*   Updated: 2024/08/29 19:05:19 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/08/29 19:21:07 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,8 @@ void	sort(t_stack *stack_a, t_stack *stack_b, int *numbers, int count)
 		swap(stack_a, 'a');
 	else if (count == 3)
 		musketeers_sort(stack_a, count);
+	else if (count <= 7)
+		dwarfs(stack_a, stack_b, count);
 	else
 		exit(1);
 }
