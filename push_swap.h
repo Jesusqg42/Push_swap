@@ -6,7 +6,7 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:56:08 by jquiaro-          #+#    #+#             */
-/*   Updated: 2024/08/26 19:40:23 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/08/29 19:04:19 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,12 +69,12 @@ void	reverse_rotate(t_stack *stack, char character);
 /* ************************************************************************** */
 /*                                 CLASSIFY                                   */
 /* ************************************************************************** */
-int		rotate_sort(t_stack *stack, int minimun);
+int		rotate_sort(t_stack *stack);
 void	musketeers_sort(t_stack *stack, int count);
 /* ************************************************************************** */
 /*                              CLASSIFY_UTILS                                */
 /* ************************************************************************** */
-int		min_index(t_stack *stack);
+int		min_index(void);
 int		count_range(t_node *stack, int index);
 
 #endif
