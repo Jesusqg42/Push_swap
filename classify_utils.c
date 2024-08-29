@@ -6,7 +6,7 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 22:54:38 by marvin            #+#    #+#             */
-/*   Updated: 2024/08/29 19:12:47 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/08/29 19:28:30 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	min_index(t_stack *stack)
 {
-	t_node *temp;
-	int minimun;
+	t_node	*temp;
+	int		minimun;
 
 	temp = stack->head;
 	minimun = temp->s_index;
