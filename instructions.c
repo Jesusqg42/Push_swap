@@ -52,3 +52,14 @@ void	reverse_rotate(t_stack *stack, char character)
 	stack->head = temp;
 	ft_printf("rr%c\n", character);
 }
+
+void	push(t_stack *stack_main, t_stack *stack_support, char character)
+{
+	int s_index;
+
+	if (stack_main->head == NULL)
+		return ;
+	s_index = stack_main->head->s_index;
+	push_stack(stack_support, s_index, pop_stack(stack_main));
+	ft_printf("p%c\n", character);
+}

@@ -66,6 +66,7 @@ void	free_stack(t_stack *stack);
 void	swap(t_stack *stack, char character);
 void	rotate(t_stack *stack, char character);
 void	reverse_rotate(t_stack *stack, char character);
+void	push(t_stack *stack_main, t_stack *stack_support, char character);
 /* ************************************************************************** */
 /*                                 CLASSIFY                                   */
 /* ************************************************************************** */
