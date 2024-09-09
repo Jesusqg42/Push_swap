@@ -6,7 +6,7 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 22:54:25 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/09 18:30:52 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/09/09 18:37:10 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,12 +84,12 @@ void	dwarfs(t_stack *stack_a, t_stack *stack_b, int count)
 		push(stack_b, stack_a, 'a');
 }
 
-void	quicksort_one(t_stack *stack_a, t_stack *stack_b, int count)
+void	quicksort_dp_one(t_stack *stack_a, t_stack *stack_b, int count)
 {
 
 }
 
-void	quicksort_two(t_stack *stack_a, t_stack *stack_b, int count)
+void	quicksort_dp_two(t_stack *stack_a, t_stack *stack_b, int count)
 {
 
 }
