@@ -6,7 +6,7 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 22:54:25 by marvin            #+#    #+#             */
-/*   Updated: 2024/08/29 19:28:43 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/09/09 18:30:52 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ void	musketeers_sort(t_stack *stack, int count)
 	int	minimun;
 	int	range;
 
+	if (stack_tidy(stack))
+		return ;
 	minimun = min_index(stack);
 	range = count_range(stack->head, minimun);
 	if (rotate_sort(stack))
@@ -65,7 +67,7 @@ void	dwarfs(t_stack *stack_a, t_stack *stack_b, int count)
 	while (i++ < length - 3)
 	{
 		minimun = min_index(stack_a);
-		if (count_range(stack_a->head, minimun) <= length - minimun - count_range(stack_a->head, minimun))
+		if (count_range(stack_a->head, minimun) < length / 2)
 			while (stack_a->head->s_index != minimun)
 				rotate(stack_a, 'a');
 		else
@@ -80,4 +82,14 @@ void	dwarfs(t_stack *stack_a, t_stack *stack_b, int count)
 	i = 0;
 	while (i++ < length - 3)
 		push(stack_b, stack_a, 'a');
+}
+
+void	quicksort_one(t_stack *stack_a, t_stack *stack_b, int count)
+{
+
+}
+
+void	quicksort_two(t_stack *stack_a, t_stack *stack_b, int count)
+{
+
 }

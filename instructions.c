@@ -6,7 +6,7 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 17:46:12 by jquiaro-          #+#    #+#             */
-/*   Updated: 2024/08/29 17:12:38 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/09/09 18:33:13 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	reverse_rotate(t_stack *stack, char character)
 
 void	push(t_stack *stack_main, t_stack *stack_support, char character)
 {
-	int s_index;
+	int	s_index;
 
 	if (stack_main->head == NULL)
 		return ;

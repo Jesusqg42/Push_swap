@@ -6,7 +6,7 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:56:08 by jquiaro-          #+#    #+#             */
-/*   Updated: 2024/08/29 19:22:35 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/09/09 18:31:38 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,8 @@ void	push(t_stack *stack_main, t_stack *stack_support, char character);
 int		rotate_sort(t_stack *stack);
 void	musketeers_sort(t_stack *stack, int count);
 void	dwarfs(t_stack *stack_a, t_stack *stack_b, int count);
+void	quicksort_one(t_stack *stack_a, t_stack *stack_b, int count);
+void	quicksort_two(t_stack *stack_a, t_stack *stack_b, int count);
 /* ************************************************************************** */
 /*                              CLASSIFY_UTILS                                */
 /* ************************************************************************** */
