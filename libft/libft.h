@@ -6,7 +6,7 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 19:07:01 by jquiaro-          #+#    #+#             */
-/*   Updated: 2024/08/15 00:01:19 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/09/11 18:41:33 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <stdint.h>
 # include <limits.h>
+# include <stdarg.h>
 
 typedef struct s_list
 {

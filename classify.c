@@ -6,7 +6,7 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 22:54:25 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/09 18:37:10 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/09/11 18:38:11 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	rotate_sort(t_stack *stack)
 	return (0);
 }
 
-void	musketeers_sort(t_stack *stack, int count)
+void	musketeers(t_stack *stack, int count)
 {
 	int	minimun;
 	int	range;
@@ -78,7 +78,7 @@ void	dwarfs(t_stack *stack_a, t_stack *stack_b, int count)
 		push(stack_a, stack_b, 'b');
 		count--;
 	}
-	musketeers_sort(stack_a, count);
+	musketeers(stack_a, count);
 	i = 0;
 	while (i++ < length - 3)
 		push(stack_b, stack_a, 'a');
