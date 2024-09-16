@@ -6,7 +6,7 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 15:03:31 by jquiaro-          #+#    #+#             */
-/*   Updated: 2024/09/16 02:43:44 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/09/16 13:44:24 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,34 +34,30 @@ int	check_duplicates(int *numbers, int count)
 
 int	check_digits(int argc, char **argv)
 {
-    int	i;
-    int	j;
-    int	count;
+	int	i;
+	int	j;
+	int	count;
 
-    i = 1;
-    count = 0;
-    while (i < argc)
-    {
-        j = 0;
-        if (argv[i][j] == '\0')
-            return (-1);
-        while (argv[i][j])
-        {
-            if (!ft_isdigit(argv[i][j]) && argv[i][j] != ' ' && \
-                argv[i][j] != '-' && argv[i][j] != '+')
-                return (-1);
-            if ((argv[i][j] == '-' || argv[i][j] == '+') && \
-                !ft_isdigit(argv[i][j + 1]))
-                return (-1);
-            if (ft_isdigit(argv[i][j]) && (argv[i][j + 1] == ' ' || \
-                argv[i][j + 1] == '\0'))
-                if (!ft_isdigit(argv[i][j + 1]))
-                    count++;
-            j++;
-        }
-        i++;
-    }
-    return (count);
+	i = 0;
+	count = 0;
+	while (++i < argc)
+	{
+		j = 0;
+		if (argv[i][j] == '\0' || (argv[i][j] == ' ' && argv[i][j + 1] == '\0'))
+			return (-1);
+		while (argv[i][j])
+		{
+			if ((!ft_isdigit(argv[i][j]) && argv[i][j] != ' ' && \
+				argv[i][j] != '-' && argv[i][j] != '+') || ((argv[i][j] == \
+				'-' || argv[i][j] == '+') && !ft_isdigit(argv[i][j + 1])))
+				return (-1);
+			if (ft_isdigit(argv[i][j]) && (argv[i][j + 1] == ' ' || \
+				argv[i][j + 1] == '\0' || argv[i][j + 1] == ' '))
+				count++;
+			j++;
+		}
+	}
+	return (count);
 }
 
 void	check_range(char **list_numbers, int *numbers)
