@@ -6,7 +6,7 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 22:54:25 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/11 18:38:11 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/09/16 00:23:59 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,10 +86,14 @@ void	dwarfs(t_stack *stack_a, t_stack *stack_b, int count)
 
 void	quicksort_dp_one(t_stack *stack_a, t_stack *stack_b, int count)
 {
-
+	(void)stack_a;
+	(void)stack_b;
+	(void)count;
 }
 
 void	quicksort_dp_two(t_stack *stack_a, t_stack *stack_b, int count)
 {
-
+	(void)stack_a;
+	(void)stack_b;
+	(void)count;
 }
