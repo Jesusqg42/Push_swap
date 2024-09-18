@@ -6,7 +6,7 @@
 /*   By: jquiaro- <jquiaro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:56:08 by jquiaro-          #+#    #+#             */
-/*   Updated: 2024/09/11 18:38:32 by jquiaro-         ###   ########.fr       */
+/*   Updated: 2024/09/18 16:30:59 by jquiaro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int		*store_digits(int argc, char **argv, int count);
 int64_t	ft_atoll(const char *str);
 void	ft_free2d(char **str);
 void	bubble_sort(int *numbers, int count);
+int		ft_sqrt(int number);
 /* ************************************************************************** */
 /*                                STACK_UTILS                                 */
 /* ************************************************************************** */
